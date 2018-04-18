@@ -3,7 +3,7 @@ CVPR18: Learning and Using the Arrow of Time
 
 ## Demo:
 1. training from scratch flow-TCAM model for AoT prediction  on UCF101
-`
+```
 CUDA_ID=0,1,2;GPU_ID=1,2,3;CPU_N=10;
 N_BATCH=32;N_FRAME=20;N_C=2
 M_LABEL=2;M_LOSS=0;M_BEND=cudnn
@@ -20,7 +20,7 @@ CUDA_VISIBLE_DEVICES=${CUDA_ID} th main_video.lua -GPUs ${GPU_ID} -nDonkeys ${CP
     -cropType ${D_CROP} -TcropType ${D_TCROP} -cache ${D_OUT} -data ${D_TXT} -xType ${D_PRE} -imType ${D_TYPE} -imFormat ${D_NAME} \
     -retrain train -retrainOpt train -paramId ${E_PARAM} \
     -nEpochs ${E_ALL} -epochNumber ${E_ST} -epochSave ${E_SAVE} -epochSize ${E_SIZE} -iter_size ${E_ITER} 2>&1 | tee ${Dout}/log-${N_BATCH}-${N_FRAME}-${N_C}-${M_DROPOUT}-${M_ARCH}-${D_TYPE}-${D_PRE}-${D_CROP}-${D_TCROP}-${E_ALL}-${E_ST}-${E_ITER}.log
-`
+```
 
 ## Tips:
 - to debug in lua, add this line:

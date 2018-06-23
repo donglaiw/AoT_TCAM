@@ -1,5 +1,12 @@
 # AoT_TCAM
-CVPR18: Learning and Using the Arrow of Time
+[[project page]](http://aot.csail.mit.edu/)
+[[dataset and pre-process tools]](https://github.com/donglaiw/AoT_Dataset)
+
+Torch model for arrow of time prediction in the CVPR 18 paper
+
+D. Wei, J. Lim, A. Zisserman, W. Freeman.
+<b>"Learning and Using the Arrow of Time."</b>
+in CVPR 2018. 
 
 ## Demo:
 1. training from scratch flow-TCAM model for AoT prediction  on UCF101
@@ -33,3 +40,16 @@ CUDA_VISIBLE_DEVICES=${CUDA_ID} th main_video.lua -GPUs ${GPU_ID} -nDonkeys ${CP
 1.  [[multi-gpu trainining]](https://github.com/soumith/imagenet-multiGPU.torch)
 2.  [[debugger]](https://github.com/slembcke/debugger.lua)
 3.  [[matlab data i/o]](https://github.com/soumith/matio-ffi.torch)
+
+
+## Citation
+Please cite our paper if you find it useful for your work:
+```
+@inproceedings{wei2018learning,
+  title={Learning and Using the Arrow of Time},
+  author={Wei, Donglai and Lim, Joseph J and Zisserman, Andrew and Freeman, William T},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={8052--8060},
+  year={2018}
+}
+```
